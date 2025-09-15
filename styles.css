@@ -1,0 +1,344 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #ffffff;
+    background: linear-gradient(135deg, #1f2222 0%, #565b62 100%);
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Main card container */
+.card {
+    background: #2c3e50;
+    border-radius: 50px;
+    box-shadow: 5px 5px 5px rgba(103, 110, 103, 0.3);
+    display: flex;
+    width: 100%;
+    max-width: 1000px;
+    min-height: 600px;
+    overflow: hidden;
+}
+
+/* Left section - Information */
+.info-section {
+    flex: 1;
+    padding: 60px 40px;
+    background: #34495e;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.info-section h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.description {
+    font-size: 1.1rem;
+    color: #ecf0f1;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+.feature-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.tag {
+    background: #ecf0f1;
+    color: #2c3e50;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.note-section {
+    background: #34495e;
+    border: 1px solid #4a6741;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.note-label {
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 8px;
+    font-size: 0.95rem;
+}
+
+.note-text {
+    color: #bdc3c7;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+/* Right section - Form */
+.form-section {
+    flex: 1;
+    padding: 60px 40px;
+    background: #2c3e50;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.inquiry-form {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+
+.form-group label {
+    font-weight: 600;
+    color: #ffffff;
+    font-size: 0.95rem;
+}
+
+.form-group input,
+.form-group textarea {
+    padding: 15px;
+    border: 2px solid #34495e;
+    border-radius: 10px;
+    font-size: 1rem;
+    background: #34495e;
+    color: #ffffff;
+    transition: all 0.3s ease;
+    font-family: inherit;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #95a5a6;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #3498db;
+    background: #2c3e50;
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+/* Error message styles */
+.error-message {
+    color: #e74c3c;
+    font-size: 0.85rem;
+    font-weight: 500;
+    margin-top: 5px;
+    display: none;
+}
+
+.error-message.show {
+    display: block;
+}
+
+.form-group.error input,
+.form-group.error textarea {
+    border-color: #e74c3c;
+    background: #2c3e50;
+}
+
+/* Submit button */
+.submit-btn {
+    background: linear-gradient(135deg, #8e44ad 0%, #9b59b6 100%);
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    margin-top: 10px;
+    align-self: flex-start;
+}
+
+.submit-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(142, 68, 173, 0.3);
+}
+
+.submit-btn:active {
+    transform: translateY(0);
+}
+
+.submit-btn:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.btn-loading {
+    display: none;
+}
+
+/* Success message */
+.success-message {
+    text-align: center;
+    padding: 40px 20px;
+    color: #ffffff;
+}
+
+.success-icon {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, #27ae60, #2ecc71);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    font-size: 2.5rem;
+    color: white;
+    font-weight: bold;
+}
+
+.success-message h3 {
+    color: #ffffff;
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+}
+
+.success-message p {
+    color: #bdc3c7;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .card {
+        flex-direction: column;
+        min-height: auto;
+    }
+    
+    .info-section,
+    .form-section {
+        padding: 40px 30px;
+    }
+    
+    .info-section h1 {
+        font-size: 2rem;
+    }
+    
+    .description {
+        font-size: 1rem;
+    }
+    
+    
+    .feature-tags {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+    
+    .card {
+        border-radius: 15px;
+    }
+    
+    .info-section,
+    .form-section {
+        padding: 30px 20px;
+    }
+    
+    .info-section h1 {
+        font-size: 1.8rem;
+    }
+    
+    .form-group input,
+    .form-group textarea {
+        padding: 12px;
+    }
+    
+    .submit-btn {
+        padding: 12px 25px;
+        font-size: 1rem;
+        align-self: stretch;
+    }
+    
+    .success-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 2rem;
+    }
+    
+    .success-message h3 {
+        font-size: 1.5rem;
+    }
+}
+
+/* Animation for form submission */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.success-message {
+    animation: fadeIn 0.5s ease-out;
+}
+
+/* Loading animation */
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.btn-loading::after {
+    content: '';
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border: 2px solid #ffffff;
+    border-radius: 50%;
+    border-top-color: transparent;
+    animation: spin 1s ease-in-out infinite;
+    margin-left: 8px;
+}
