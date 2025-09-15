@@ -223,22 +223,22 @@ SETUP STEPS:
 2. Add an email service (Gmail, Outlook, etc.)
 3. Create TWO email templates:
 
-   TEMPLATE 1 - Admin Notification (template_zvxyk8r):
-   - To: Your email address (ayush@xeni.com)
+   TEMPLATE 1 - Admin Notification (template_cfg8uob):
+   - To: Your email address ()
    - Subject: "New Inquiry: {{subject}}"
-   - Content: "New inquiry from {{from_name}} ({{from_email}}): {{message}}"
-   - Variables: {{from_name}}, {{from_email}}, {{subject}}, {{message}}
+   - Content: "New inquiry from {{name}} ({{email}}): {{message}}"
+   - Variables: {{name}}, {{email}}, {{subject}}, {{message}}
 
-   TEMPLATE 2 - User Confirmation (template_kxx1wct):
+   TEMPLATE 2 - User Confirmation (template_znr8kor):
    - To: {{email}} (user's email address)
    - Subject: "Thank you for your inquiry"
    - Content: "Hi! Thank you for reaching out. We'll get back to you within 24 hours."
    - Variables: {{email}}
 
 4. Update the credentials in this code:
-   - serviceId: 'service_z5ku7gi'
-   - publicKey: 'me9_LtlpqjDcnUsEZ'
-   - Template IDs: 'template_zvxyk8r' and 'template_kxx1wct'
+   - serviceId: 'service_251x2ma'
+   - publicKey: 'VDZ4knzM1kH7He_Lo'
+   - Template IDs: 'template_znr8kor' and 'template_cfg8uob'
 
 Both emails will be sent automatically when the form is submitted!
 */
